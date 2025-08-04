@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>俄羅斯方塊遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="tetris-logo">
+                <span class="tetris-t">T</span><span class="tetris-e">E</span><span class="tetris-t2">T</span><span class="tetris-r">R</span><span class="tetris-i">I</span><span class="tetris-s">S</span>
+            </h1>
+        </div>
+        
+        <div class="game-main">
+            <div class="hold-sidebar">
+                <div class="hold-piece">
+                    <h3>HOLD</h3>
+                    <canvas id="holdCanvas" width="120" height="120"></canvas>
+                </div>
+            </div>
+            <div class="game-area">
+                <canvas id="gameCanvas" width="300" height="600"></canvas>
+                <div class="game-overlay" id="gameOverlay">
+                    <div class="overlay-content">
+                        <h2 id="overlayTitle">遊戲開始</h2>
+                        <p id="overlayMessage">按空白鍵開始遊戲</p>
+                        <button id="restartButton" style="display:none; margin-top:20px; font-size:1.2em; padding:12px 32px; border-radius:12px; background:linear-gradient(90deg,#ffb300,#ffe600,#00e600,#00bfff,#a259ff); color:#222; font-weight:bold; border:none; box-shadow:0 2px 8px rgba(0,0,0,0.2); cursor:pointer;">重新開始</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-sidebar">
+                
+                <div class="next-piece">
+                    <h3>下一個方塊</h3>
+                    <canvas id="nextCanvas" width="120" height="120"></canvas>
+                </div>
+                
+                <div class="score-board">
+                    <div class="score-item">
+                        <span>分數:</span>
+                        <span id="score">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span>最高分:</span>
+                        <span id="highScore">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span>等級:</span>
+                        <span id="level">1</span>
+                    </div>
+                    <div class="score-item">
+                        <span>行數:</span>
+                        <span id="lines">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="comboDisplay" class="combo-display"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
